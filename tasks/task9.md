@@ -3,7 +3,7 @@
 **Learnings**
 
 - Adding styled-components
-- using the .reduce function
+- using the [reduce() function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 - Adding the `useContext` and `ShopContext`
 
 **Task Definition**
