@@ -54,28 +54,37 @@ export default Navigation
   <p>
 
 ```jsx
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from "react-router-dom"
 import logo from '../images/logo_black.png'
+import {ShopContext} from '../context'
+import styled from 'styled-components'
 
 function Navigation() {
+
+  const { checkout } = useContext(ShopContext)
+
+  const cartCount = checkout
+    ? checkout.lineItems.reduce((accumulator, lineItem) => accumulator + lineItem.quantity, 0)
+    : 0
+
   return (
     <nav>
       <ul>
-        <li>
+        <ListItem>
           <Link to="/">
             <img src={logo} alt="Home" />
           </Link>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <Link to="/why-us">Why Us</Link>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <Link to="/our-services">Our Services</Link>
-        </li>
-        <li>
-          <Link to="/cart">Cart</Link>
-        </li>
+        </ListItem>
+        <ListItem>
+          <Link to="/cart">Cart <Count>{cartCount}</Count></Link>
+        </ListItem>
       </ul>
     </nav>
   )
