@@ -14,6 +14,7 @@ From here you can find the tasks for the day:
 - [Task 6](tasks/task6.md)
 - [Task 7](tasks/task7.md)
 - [Task 8](tasks/task8.md)
+- [Task 9](tasks/task9.md)
 
 ---
 

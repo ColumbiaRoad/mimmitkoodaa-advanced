@@ -120,4 +120,4 @@ export default Product
   </p>
 </details>
 
-**[← Previous task](./task7.md)**
+**[← Previous task](./task7.md)** | **[Next task →](./task9.md)**
